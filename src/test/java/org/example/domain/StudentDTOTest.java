@@ -10,21 +10,21 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 
-class StudentTest {
-    private final Logger LOGGER = LoggerFactory.getLogger(StudentTest.class);
+class StudentDTOTest {
+    private final Logger LOGGER = LoggerFactory.getLogger(StudentDTOTest.class);
 
     @Test
     void getDateOfBirth() {
         try (ValidatorFactory factory = Validation.buildDefaultValidatorFactory()) {
             Validator validator = factory.getValidator();
-            Student student = new Student();
-            student.setWorking(true);
-            student.setAboutMe("some info");
-            student.setAge(44);
-            Set<ConstraintViolation<Student>> constraintViolations =
-                    validator.validate(student);
+            StudentDTO studentDTO = new StudentDTO();
+            studentDTO.setWorking(true);
+            studentDTO.setAboutMe("some info");
+            studentDTO.setAge(44);
+            Set<ConstraintViolation<StudentDTO>> constraintViolations =
+                    validator.validate(studentDTO);
 
-            for (ConstraintViolation<Student> violation : constraintViolations
+            for (ConstraintViolation<StudentDTO> violation : constraintViolations
             ) {
                 LOGGER.error(violation.getMessage());
             }

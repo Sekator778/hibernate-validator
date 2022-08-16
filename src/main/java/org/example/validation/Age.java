@@ -14,6 +14,5 @@ import java.lang.annotation.Target;
 public @interface Age {
     String message() default "age.error.message";
     Class<?>[] groups() default {};
-    public abstract Class<? extends Payload> [] payload() default {};
-
+   Class<? extends Payload> [] payload() default {};
 }

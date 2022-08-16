@@ -2,11 +2,7 @@ package org.example.domain;
 
 import jakarta.validation.constraints.*;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Optional;
-
-public class Student {
+public class StudentDTO {
 
     @NotNull(message = "Name cannot be null")
     private String name;
