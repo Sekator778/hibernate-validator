@@ -21,8 +21,8 @@ import java.lang.annotation.Target;
 public @interface CountPaws {
     String message();
 
-//    Class<?>[] groups() default {};
-//
-//    Class<? extends Payload>[] payload() default {};
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 
 }
